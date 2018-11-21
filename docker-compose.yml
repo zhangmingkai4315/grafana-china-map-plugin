@@ -1,0 +1,17 @@
+version: '2'
+services:
+  grafana:
+    restart: always
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/var/lib/grafana/plugins/grafana-chinamap-panel
+    links: 
+      - prometheus
+  prometheus:
+    build: ./prometheus-server
+    links: 
+      - mapdata-server
+  mapdata-server:
+    build: ./mapdata-server
