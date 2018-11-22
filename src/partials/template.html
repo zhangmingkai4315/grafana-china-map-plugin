@@ -1,3 +1,6 @@
-<div class="chinamap-panel">
+<div class="chinamap-panel" ng-class="{'piechart-panel--legend-right': ctrl.panel.legendType == 'Right side'}">
   <div id="chinamap"></div>
+  <div class="map-legend" ng-if="ctrl.panel.legend.show" chinamap-legend></div>
 </div>
+
+<div class="clearfix"></div>

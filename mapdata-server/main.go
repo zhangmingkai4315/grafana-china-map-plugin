@@ -30,12 +30,17 @@ func main() {
 	flag.Parse()
 	go func() {
 		for {
-			mapData.WithLabelValues("shandong").Set(rand.Float64() * 1000)
-			mapData.WithLabelValues("beijing").Set(rand.Float64() * 1000)
-			mapData.WithLabelValues("zhejiang").Set(rand.Float64() * 1000)
-			mapData.WithLabelValues("henan").Set(rand.Float64() * 1000)
-			mapData.WithLabelValues("guangzhou").Set(rand.Float64() * 1000)
-			mapData.WithLabelValues("sichuan").Set(rand.Float64() * 1000)
+			mapData.WithLabelValues("山东").Set(rand.Float64() * 1000)
+			mapData.WithLabelValues("北京").Set(rand.Float64() * 1000)
+			mapData.WithLabelValues("新疆").Set(rand.Float64() * 1000)
+			mapData.WithLabelValues("河南").Set(rand.Float64() * 1000)
+			mapData.WithLabelValues("河北").Set(rand.Float64() * 1000)
+			mapData.WithLabelValues("四川").Set(rand.Float64() * 1000)
+			mapData.WithLabelValues("江西").Set(rand.Float64() * 1000)
+			mapData.WithLabelValues("山西").Set(rand.Float64() * 1000)
+			mapData.WithLabelValues("陕西").Set(rand.Float64() * 1000)
+			mapData.WithLabelValues("广州").Set(rand.Float64() * 1000)
+			mapData.WithLabelValues("台湾").Set(rand.Float64() * 1000)
 			time.Sleep(1000)
 		}
 	}()
