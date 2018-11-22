@@ -14,6 +14,7 @@ export default class MapRender{
   }
   addChinaMap(){
     const viewId = `#panel-${this.ctrl.panel.id} #chinamap`;
+    $(`${viewId} svg`).remove()
     const projection = d3.geoMercator()
       .translate([-420, 480])
       .scale(400);
@@ -36,8 +37,10 @@ export default class MapRender{
     this.ctrl.panel.svgObject = svg;
   }
   renderMap(){
+    console.log(this.ctrl)
     const viewId = `#panel-${this.ctrl.panel.id} #chinamap`;
-    if(!this.ctrl.panel.svgObject){
+    const svg = this.ctrl.panel.svgObject 
+    if(!svg || _.isEmpty(svg._groups[0][0])){
       this.addChinaMap()
     }
     this.updateMapData()

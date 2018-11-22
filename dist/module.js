@@ -15375,6 +15375,7 @@ var MapRender = function () {
     key: 'addChinaMap',
     value: function addChinaMap() {
       var viewId = '#panel-' + this.ctrl.panel.id + ' #chinamap';
+      $(viewId + ' svg').remove();
       var projection = d3.geoMercator().translate([-420, 480]).scale(400);
       var path = d3.geoPath(projection);
       var svg = d3.select(viewId).classed("svg-container", true).append("svg").attr("preserveAspectRatio", "xMinYMin meet").attr("viewBox", "0 0 600 400").classed("svg-content-responsive", true);
@@ -15389,8 +15390,10 @@ var MapRender = function () {
   }, {
     key: 'renderMap',
     value: function renderMap() {
+      console.log(this.ctrl);
       var viewId = '#panel-' + this.ctrl.panel.id + ' #chinamap';
-      if (!this.ctrl.panel.svgObject) {
+      var svg = this.ctrl.panel.svgObject;
+      if (!svg || _lodash2.default.isEmpty(svg._groups[0][0])) {
         this.addChinaMap();
       }
       this.updateMapData();
