@@ -34,3 +34,5 @@ grafana
 .notouch
 .DS_Store
 .tscache
+
+dist
