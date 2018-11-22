@@ -1,4 +1,37 @@
-panel-plugin-grafana-plugin-template-webpack .hello {
-  font-size: 14pt; }
+@charset "UTF-8";
+panel-plugin-grafana-china-map-plugin {
+  /*创建一个d3的tooltip*/ }
+  panel-plugin-grafana-china-map-plugin .svg-container {
+    display: inline;
+    position: relative;
+    padding-bottom: 100%;
+    /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden; }
+  panel-plugin-grafana-china-map-plugin .svg-content-responsive {
+    display: block;
+    top: 10px;
+    left: 0; }
+  panel-plugin-grafana-china-map-plugin .country, panel-plugin-grafana-china-map-plugin .province {
+    stroke-width: 0.2;
+    fill: #d2d2d2;
+    stroke: #08306b;
+    stroke-linejoin: round; }
+  panel-plugin-grafana-china-map-plugin .country:hover, panel-plugin-grafana-china-map-plugin .province:hover {
+    fill: rgba(0, 0, 0, 0.71);
+    stroke-width: 0.5; }
+  panel-plugin-grafana-china-map-plugin .selected_country {
+    fill: #397082; }
+  panel-plugin-grafana-china-map-plugin .hidden {
+    display: none; }
+  panel-plugin-grafana-china-map-plugin div.tooltip {
+    color: #222;
+    background: #b5b5b5;
+    padding: .5em;
+    text-shadow: #f5f5f5 0 1px 0;
+    border-radius: 2px;
+    box-shadow: 0px 0px 2px 0px #a6a6a6;
+    opacity: 0.9;
+    position: absolute; }
 
 /*# sourceMappingURL=panel.base.css.map*/

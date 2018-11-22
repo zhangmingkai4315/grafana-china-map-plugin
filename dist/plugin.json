@@ -1,12 +1,12 @@
 {
   "type": "panel",
   "name": "ChinaMap",
-  "id": "grafana-china-map-plugin",
+  "id": "grafana-chinamap-plugin",
   "info": {
     "description": "Plugin For Display A China Map In Grafana",
     "author": {
       "name": "Mike",
-      "url": "http://github.com/zhangmingkai4315/grafana-china-map-plugin"
+      "url": "http://github.com/zhangmingkai4315/grafana-chinamap-plugin"
     },
     "keywords": ["china","map","panel","d3"],
     "logos": { },
